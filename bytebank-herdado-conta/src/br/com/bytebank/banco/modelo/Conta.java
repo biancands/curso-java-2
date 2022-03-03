@@ -29,6 +29,12 @@ public abstract class Conta {
         //this.saldo = 100;
         //System.out.println("Estou criando uma conta " + this.numero);
     }
+    
+    @Override
+    public String toString() {
+    	
+    	return "Numero: "+this.numero+", Agencia: "+this.agencia;
+    }
 
     public abstract void deposita(double valor);
     
