@@ -15,6 +15,22 @@ public abstract class Conta {
     private Cliente titular;
     private static int total = 0;
     
+    @Override
+    public boolean equals(Object ref) {
+    	
+    	Conta outra = (Conta) ref;
+    	
+    	if(this.agencia != outra.agencia) {
+    		return false;
+    	}
+    	
+    	if(this.numero != outra.numero) {
+    		return false;
+    	}
+    	
+    	return true;
+    }
+    
     /**
      * Construtor para inicializar o objeto Conta a partir da agencia e numero
 	 * @param agencia
